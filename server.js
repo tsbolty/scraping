@@ -1,3 +1,10 @@
+fetch("https://www.rtd-denver.com/app/nextride/stop/34236").then(res =>{
+  res.json()
+}).then(data =>{
+  console.log(data)
+})
+
+
 // const path = require('path')
 // const scrape = require('website-scraper');
 
@@ -38,26 +45,28 @@
 
 // ______________________________________
 
-const puppeteer = require('puppeteer');
-const $ = require('cheerio');
-const url = 'https://www.rtd-denver.com/app/nextride/stop/34236';
+// const puppeteer = require('puppeteer');
+// const $ = require('cheerio');
+// const url = 'https://www.rtd-denver.com/app/nextride/stop/34236';
 
-puppeteer
-  .launch()
-  .then(function(browser) {
-    return browser.newPage();
-  })
-  .then(function(page) {
-    return page.goto(url).then(function() {
-      return page.content();
-    });
-  })
-  .then(function(html) {
-    $('p', html).each(function() {
-      console.log($(this).text());
-      process.exit()
-    });
-  })
-  .catch(function(err) {
-    console.log("Nope. Didn't work")
-  });
+// puppeteer
+//   .launch()
+//   .then(function(browser) {
+//     return browser.newPage();
+//   })
+//   .then(function(page) {
+//     return page.goto(url).then(function() {
+//       return page.content();
+//     });
+//   })
+//   .then(function(html) {
+//     console.log(html)
+//     $('p', html).each(function() {
+//       console.log($(this).text());
+//       process.exit()
+//     });
+//   })
+//   .catch(function(err) {
+//     console.log("Nope. Didn't work")
+//   });
+
