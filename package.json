@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^5.5.0",
     "website-scraper": "^4.2.3"
   }
 }
